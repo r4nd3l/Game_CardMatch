@@ -9,6 +9,10 @@
   <link rel="shortcut icon" href="img/favicon.svg"/>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
 
+  <!-- Font-Awesome -->
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+
   <!-- Custom Css -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -16,7 +20,284 @@
 </head>
 <body>
 
-  
+  <h1 class="page-title">Mix-or-Match</h1>
+  <div class="overlay-text visible">
+    Click to Start
+  </div>
+  <div id="game-over-text" class="overlay-text">
+    Game Over
+    <span class="overlay-text-small">Click to Restart</span>
+  </div>
+  <div id="victory-text" class="overlay-text">
+    Victory
+    <span class="overlay-text-small">Click to Restart</span>
+  </div>
+  <div class="game-container">
+    <div class="game-info-container">
+      <div class="game-info">
+        Time <span id="time-remaining">100</span>
+      </div>
+      <div class="game-info">
+        Flips <span id="flips">0</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/btc-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/btc-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/codepen-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/codepen-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/dropbox-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/dropbox-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/free-code-camp-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/free-code-camp-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/github-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/github-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/google-drive-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/google-drive-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/linux-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/linux-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/opera-brands.svg" alt="card_back">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="spider" src="img/card/question-solid.svg" alt="card_back">
+      </div>
+      <div class="card-front card-face">
+        <img class="cob-web cob-web-top-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-top-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-left" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="cob-web cob-web-bottom-right" src="img/card/ruler-combined-solid.svg" alt="card_back">
+        <img class="card-value" src="img/card/opera-brands.svg" alt="card_back">
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js" charset="utf-8"></script>
 </body>
