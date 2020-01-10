@@ -1,11 +1,11 @@
 class AudioController{
   constructor(){
-    this.bgMusic = new Audio('sfx/.mp3');
-    this.flipSound = new Audio('sfx/.mp3');
-    this.matchSound = new Audio('sfx/.mp3');
-    this.victorySound = new Audio('sfx/.mp3');
-    this.gameOverSound = new Audio('sfx/.mp3');
-    this.bgMusic.volume = 0.5;
+    this.bgMusic = new Audio('sfx/Jetpack.mp3');
+    this.flipSound = new Audio('sfx/flip.mp3');
+    this.matchSound = new Audio('sfx/match.mp3');
+    this.victorySound = new Audio('sfx/victory.mp3');
+    this.gameOverSound = new Audio('sfx/gameOver.mp3');
+    this.bgMusic.volume = 0;
     this.bgMusic.loop = true;
   }
   startMusic(){
@@ -149,7 +149,7 @@ if(document.readyState === 'loading'){
 function ready(){
   let overlays = Array.from(document.getElementsByClassName('overlay-text'));
   let cards = Array.from(document.getElementsByClassName('card'));
-  let game = new MixOrMatch(100, cards);
+  let game = new MixOrMatch(60, cards);
 
   overlays.forEach(overlay => {
     overlay.addEventListener('click', () => {

@@ -2,8 +2,12 @@
 
 /* Fonts */
 @font-face {
-    font-family: 'CREERG__'; /*a name to be used later*/
-    src: url('../font/CREERG__.TTF'); /*URL to font*/
+    font-family: 'retroVille'; /*a name to be used later*/
+    src: url('../font/retroVille.ttf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'retroGaming'; /*a name to be used later*/
+    src: url('../font/retroGaming.ttf'); /*URL to font*/
 }
 
 :root{
@@ -28,6 +32,7 @@
 
 html{
   min-height: 100vh;
+  font-family: 'retroVille';
 }
 
 body {
@@ -35,13 +40,84 @@ body {
   background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%);
 }
 
-.page-title{
+/* .page-title{
   color: white;
-  font-family: 'CREERG__';
   font-weight: normal;
   text-align: center;
   font-size: 6em;
+} */
+
+/* Neon CardMatch */
+h1{
+  margin: 0;
+  padding: 0;
+  color: #111;
+  font-size: 10em;
 }
+
+
+h1 span{
+  /* display: table-cell; */
+  margin: 0;
+  padding: 0;
+  animation: animate 3s linear infinite;
+  font-weight: 300;
+}
+
+h1 span:nth-child(1){animation-delay: 0.25s;}
+h1 span:nth-child(2){animation-delay: 0.75s;}
+h1 span:nth-child(3){animation-delay: 1.00s;}
+h1 span:nth-child(4){animation-delay: 1.25s;}
+h1 span:nth-child(5){animation-delay: 1.75s;}
+h1 span:nth-child(6){animation-delay: 2.00s;}
+h1 span:nth-child(7){animation-delay: 2.25s;}
+h1 span:nth-child(8){animation-delay: 2.50s;}
+h1 span:nth-child(9){animation-delay: 2.75s;}
+h1 span:nth-child(10){animation-delay: 3.0s;}
+
+@keyframes anim {
+  0%,100%{
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px var(--dc-),
+                0 0 20px var(--dc-),
+                0 0 40px var(--dc-),
+                0 0 80px var(--dc-),
+                0 0 120px var(--dc-),
+                0 0 200px var(--dc-),
+                0 0 300px var(--dc-),
+                0 0 400px var(--dc-);
+
+  }
+  5%,95%{
+    color: var(--rgba-dc-);
+    filter: blur(0px);
+    text-shadow: var(--text-sh-);
+  }
+}
+
+@keyframes animate {
+  0%,100%{
+    color: #fff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px var(--neon-),
+                0 0 20px var(--neon-),
+                0 0 40px var(--neon-),
+                0 0 80px var(--neon-),
+                0 0 120px var(--neon-),
+                0 0 200px var(--neon-),
+                0 0 300px var(--neon-),
+                0 0 400px var(--neon-);
+
+  }
+  5%,95%{
+    color: var(--gr-);
+    filter: blur(0px);
+    text-shadow: var(--text-sh-);
+  }
+}
+
+/* Neon CardMatch */
 
 .game-info-container{
   grid-column: 1 / -1;
@@ -52,7 +128,17 @@ body {
 .game-info{
   color: grey;
   font-size: 4em;
-  font-family: 'Arial';
+}
+
+#time-remaining:before{
+  content: 'time ';
+}
+#flips:before{
+  content: 'flips ';
+}
+
+.game-info span{
+  font-family: 'retroVille';
 }
 
 .game-container{
