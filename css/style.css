@@ -109,6 +109,7 @@ body {
   align-items: center;
   z-index: 100;
   color: red;
+  cursor: pointer;
 }
 
 .overlay-text-small{
