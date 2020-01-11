@@ -279,9 +279,23 @@ h1 span:nth-child(10){animation-delay: 3.0s;}
   transform: scale(1.25);
 }
 
+.pointer{
+  display: none;
+}
+
+.overlay-text span:nth-child(2){
+  display: none;
+}
+
 @media (max-width: 600px) {
   .game-container{
     margin-top: 3em;
+  }
+  .overlay-text span:nth-child(1){
+    display: none;
+  }
+  .overlay-text span:nth-child(2){
+    display: flex;
   }
   .overlay-text span{
     font-size: 0.5em;
@@ -314,6 +328,38 @@ h1 span:nth-child(10){animation-delay: 3.0s;}
   }
   .game-info:first-of-type span:last-of-type{
     font-size: 0.5em;
+  }
+  .pointer{
+    display: flex;
+    margin-top: 2em;
+    font-size: 0.3em;
+  }
+
+  .pointer::before {
+    border: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    -webkit-animation: pulsing 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  @-webkit-keyframes pulsing {
+    0% {
+      box-shadow: 0 0 0 0px rgba(185, 185, 185, .7);
+      background: rgba(185, 185, 185, .7);
+    }
+    80% {
+      background: rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 120px rgba(255, 255, 255, 0);
+    }
+  }
+
+  body{
+    overflow-y: hidden;
   }
 }
 
