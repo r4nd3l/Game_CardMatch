@@ -203,10 +203,6 @@ h1 span:nth-child(10){animation-delay: 3.0s;}
   transform: rotateY(0);
 }
 
-.card-matched .card-value{
-  animation: dance 1s linear infinite 500ms;
-}
-
 .overlay-text{
   display: none;
   position: fixed;
@@ -253,18 +249,6 @@ h1 span:nth-child(10){animation-delay: 3.0s;}
  }
 }
 
-@keyframes dance {
-  0%, 100%{
-    transform: rotate(0);
-  }
-  25%{
-    transform: rotate(-30deg);
-  }
-  75%{
-    transform: rotate(30deg);
-  }
-}
-
 .card-back{
   background-color: black;
   border-color: grey;
@@ -297,11 +281,25 @@ h1 span:nth-child(10){animation-delay: 3.0s;}
 
 @media (max-width: 600px) {
   .game-container{
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(4, auto);
   }
   .game-info-container{
     flex-direction: column;
     align-items: center;
+  }
+  .overlay-text span{
+    font-size: 0.8em;
+  }
+  @keyframes overlay-grow {
+   from{
+     background-color: rgba(0, 0, 0, 0);
+     font-size: 0;
+   }
+   to{
+     background-color: rgba(0, 0, 0, .8);
+     font-size: 6em;
+     text-align: center;
+   }
   }
 }
 
