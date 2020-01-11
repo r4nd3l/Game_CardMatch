@@ -357,10 +357,6 @@ h1 span:nth-child(10){animation-delay: 3.0s;}
       box-shadow: 0 0 0 120px rgba(255, 255, 255, 0);
     }
   }
-
-  body{
-    overflow-y: hidden;
-  }
 }
 
 
