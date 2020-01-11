@@ -42,6 +42,12 @@ body {
   background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%);
 	background-size: 400% 400%;
 	animation: gradientBG 15s ease infinite;
+
+  /* Prevent text selection for better game experience */
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
 }
 
 @keyframes gradientBG {
