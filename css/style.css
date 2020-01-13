@@ -357,6 +357,27 @@ h1 span:nth-child(10){animation-delay: 3.0s;}
       box-shadow: 0 0 0 120px rgba(255, 255, 255, 0);
     }
   }
+  ::-webkit-selection { /* Code for Firefox */
+    color: transparent;
+    background: transparent;
+  }
+  ::-moz-selection { /* Code for Firefox */
+    color: transparent;
+    background: transparent;
+  }
+
+  ::selection {
+    color: transparent;
+    background: transparent;
+  }
+  .card{
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+
+    /* pointer-events: inherit; */
+  }
 }
 
 
