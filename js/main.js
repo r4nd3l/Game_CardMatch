@@ -38,9 +38,9 @@ class MixOrMatch{
     this.timeRemaining = totalTime;
     this.timer = document.getElementById('time-remaining');
     this.ticker = document.getElementById('flips');
+    this.switchBtn = document.getElementById('switchBtn');
     this.audioController = new AudioController();
   }
-
   startGame(){
     this.totalClicks = 0;
     this.timeRemaining = this.totalTime;
@@ -56,6 +56,13 @@ class MixOrMatch{
     this.hideCards();
     this.timer.innerText = this.timeRemaining;
     this.ticker.innerText = this.totalClicks;
+    this.switchBox();
+  }
+  // Switch off the music
+  switchBox(){
+    this.switchBtn.addEventListener('click', () => {
+      this.audioController.stopMusic();
+    });
   }
   startCountdown(){
     return setInterval(() => {
@@ -149,7 +156,7 @@ if(document.readyState === 'loading'){
 function ready(){
   let overlays = Array.from(document.getElementsByClassName('overlay-text'));
   let cards = Array.from(document.getElementsByClassName('card'));
-  let game = new MixOrMatch(600, cards);
+  let game = new MixOrMatch(60, cards);
 
   overlays.forEach(overlay => {
     overlay.addEventListener('click', () => {
@@ -164,19 +171,6 @@ function ready(){
   });
 }
 
-// Disable or Enable Music
-function switchBox() {
-  let audioController = new AudioController();
-  var checkBox = document.getElementById("switchBtn");
-  var text = document.getElementById("text");
-  if (checkBox.checked == false){
-    text.style.display = "block";
-    audioController.stopMusic();
-  }else {
-    text.style.display = "none";
-    audioController.startMusic();
-  }
-}
 
 
 
