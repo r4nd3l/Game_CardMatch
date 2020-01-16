@@ -80,11 +80,13 @@ class MixOrMatch{
     clearInterval(this.countDown);
     this.audioController.gameOver();
     document.getElementById('game-over-text').classList.add('visible');
+    document.getElementById('off').checked = false;
   }
   victory(){
     clearInterval(this.countDown);
     this.audioController.victory();
     document.getElementById('victory-text').classList.add('visible');
+    document.getElementById('off').checked = false;
   }
   hideCards(){
     this.cardsArray.forEach(card => {
