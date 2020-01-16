@@ -188,11 +188,19 @@
       </div>
     </div>
   </div>
-  <div class="switch">
-    <label class="pure-material-switch">
-      <input type="checkbox" id="switchBtn" onclick="" checked="true">
-      <span>Music</span>
-    </label>
+
+  <div class="switchBox">
+    <fieldset class="switch">
+      <legend>Music</legend>
+
+      <input id="yes" name="view" type="radio" checked>
+      <label for="yes">ON</label>
+
+      <input id="no" name="view" type="radio">
+      <label for="no">OFF</label>
+
+      <span class="switch-button"></span>
+    </fieldset>
   </div>
 
   <script src="js/main.js" async charset="utf-8"></script>
