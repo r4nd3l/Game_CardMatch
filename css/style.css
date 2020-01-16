@@ -288,15 +288,18 @@ h1 span:nth-child(10){animation-delay: 3.0s;}
 }
 
 /* switch button */
-.switchBox {
+.switchBox_1 {
+  position: absolute;
+  margin: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   top: 0;
-  left: 0;
+  left: auto;
   right: 0;
   bottom: auto;
-  margin: 50px 0 10px;
+}
+
+.switchBox_2 {
+  display: none;
 }
 
 .switch {
@@ -471,6 +474,19 @@ h1 span:nth-child(10){animation-delay: 3.0s;}
     user-select: none; /* Standard syntax */
 
     /* pointer-events: inherit; */
+  }
+  .switchBox_1{
+    display: none;
+  }
+  .switchBox_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    margin: 50px 0 10px;
   }
 }
 
