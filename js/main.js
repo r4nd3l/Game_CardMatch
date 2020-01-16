@@ -38,7 +38,8 @@ class MixOrMatch{
     this.timeRemaining = totalTime;
     this.timer = document.getElementById('time-remaining');
     this.ticker = document.getElementById('flips');
-    this.switchBtn = document.getElementById('switchBtn');
+    this.switchOff = document.getElementById('off');
+    this.switchOn = document.getElementById('on');
     this.audioController = new AudioController();
   }
   startGame(){
@@ -60,14 +61,12 @@ class MixOrMatch{
   }
   // Switch off the music
   switchBox(){
-    this.switchBtn.addEventListener('click', () => {
+    this.switchOff.addEventListener('click', () => {
       this.audioController.stopMusic();
     });
-
-    // () => it's a function, so onclick maybe?
-    // this.switchBtn.addEventListener('click', () => {
-    //   this.audioController.stopMusic();
-    // });
+    this.switchOn.addEventListener('click', () => {
+      this.audioController.startMusic();
+    });
   }
   startCountdown(){
     return setInterval(() => {

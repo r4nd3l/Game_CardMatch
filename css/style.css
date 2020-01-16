@@ -330,7 +330,7 @@ h1 span:nth-child(10){animation-delay: 3.0s;}
   margin-top: 2px;
   padding: 5px 0 3px 0;
   text-align: center;
-  color: var(--gr2-);
+  color: var(--gr-);
   cursor: pointer;
   transition: color 0s ease .1s;
   border: 1px solid white;
@@ -368,10 +368,16 @@ h1 span:nth-child(10){animation-delay: 3.0s;}
   border-radius: 5px;
   background-color: var(--sg-);
   transition: all .3s ease-out;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .switch input:last-of-type:checked ~ .switch-button {
   left: 69%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 /* switch button */
 
